@@ -45,7 +45,7 @@ const TryItPanel = ({ problem, hint, answer, steps = [], source }) => {
         {/* Mode buttons */}
         <div style={{ display: 'flex', gap: 8 }}>
           <button
-            onClick={() => { setMode('try'); setShowHint(false); setAttempted(true); }}
+            onClick={() => { setMode('try'); setShowHint(false); }}
             style={{
               ...modeBtnStyle,
               background: mode === 'try' ? colors.accent : 'rgba(255,255,255,0.07)',
