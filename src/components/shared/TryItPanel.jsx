@@ -15,7 +15,6 @@ import StepReveal from './StepReveal';
 const TryItPanel = ({ problem, hint, answer, steps = [], source }) => {
   const [mode, setMode] = useState(null); // null | 'try' | 'show'
   const [showHint, setShowHint] = useState(false);
-  const [attempted, setAttempted] = useState(false);
 
   return (
     <div style={{

@@ -23,7 +23,6 @@ const QuizCard = ({ question, options = [], correct = 0, explanation, onAnswer }
   };
 
   const isCorrect = answered && selected === correct;
-  const isWrong = answered && selected !== correct;
 
   const reset = () => { setSelected(null); setAnswered(false); };
 
