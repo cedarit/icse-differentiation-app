@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import 'katex/dist/katex.min.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #0f0e17;
+  --color-surface: #1e1b4b;
+  --color-primary: #6366f1;
+  --color-secondary: #f59e0b;
+  --color-accent: #10b981;
+  --color-text: #e2e8f0;
+  --color-muted: #94a3b8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  overflow-x: hidden;
+}
+
+/* KaTeX overrides for dark theme */
+.katex { color: var(--color-text); font-size: 1.05em; }
+.katex-display { margin: 0.8em 0; }
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-surface); border-radius: 3px; }
+
+/* Smooth transitions globally */
+* { transition: color 0.2s, background-color 0.2s, border-color 0.2s; }
+
+/* Graph canvas base */
+.graph-canvas { border-radius: 12px; overflow: hidden; }
+
+/* Step reveal animations */
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.step-enter { animation: fadeSlideIn 0.4s ease forwards; }
+
+/* Quiz card result colors */
+.answer-correct { background: rgba(16,185,129,0.15); border-color: #10b981; }
+.answer-wrong   { background: rgba(239,68,68,0.15);  border-color: #ef4444; }
